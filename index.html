@@ -479,6 +479,73 @@
       border-color: var(--accent);
     }
 
+    /* ── INSIGHTS TEASER ── */
+    .insight-teaser {
+      display: block;
+      text-decoration: none;
+      background: var(--surface-2);
+      border: 1px solid var(--rule-hard);
+      padding: 32px 36px;
+      margin-top: 8px;
+      transition: border-color 0.2s;
+    }
+    .insight-teaser:hover { border-color: var(--accent); }
+    .insight-teaser:hover .teaser-read { color: var(--accent); }
+    .insight-teaser:hover .teaser-arrow { transform: translateX(4px); }
+    .teaser-eyebrow {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 14px;
+    }
+    .teaser-title {
+      font-family: var(--serif);
+      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+      line-height: 1.25;
+      color: var(--ink);
+      margin-bottom: 14px;
+    }
+    .teaser-quote {
+      font-size: 0.9rem;
+      color: var(--ink-muted);
+      line-height: 1.75;
+      border-left: 2px solid var(--rule-hard);
+      padding-left: 16px;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+    .teaser-read {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-mid);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.2s;
+    }
+    .teaser-arrow {
+      display: inline-block;
+      transition: transform 0.2s;
+    }
+    .insights-all {
+      display: inline-block;
+      margin-top: 16px;
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      color: var(--ink-faint);
+      text-decoration: none;
+      letter-spacing: 0.06em;
+      border-bottom: 1px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .insights-all:hover { color: var(--accent); border-color: var(--accent); }
+
     /* ── ENTRANCE ANIMATION ── */
     @media (prefers-reduced-motion: no-preference) {
       .fade-up {
@@ -576,6 +643,20 @@
     </div>
   </section>
 
+
+  <!-- INSIGHTS TEASER -->
+  <section>
+    <div class="wrap">
+      <p class="section-tag">From the signal log</p>
+      <a class="insight-teaser" href="/insights/your-clinic-is-invisible-to-ai">
+        <p class="teaser-eyebrow">Latest insight &middot; 5 min read</p>
+        <p class="teaser-title">Your clinic is invisible to AI &mdash; and you don&apos;t know it yet</p>
+        <p class="teaser-quote">The billboard has moved again. It now lives inside the model. When AI recommends a clinic, that recommendation reaches someone who has already decided to act. The only question is whether your name comes up &mdash; or your competitor&apos;s does.</p>
+        <span class="teaser-read">Read the full piece <span class="teaser-arrow">&rarr;</span></span>
+      </a>
+      <a class="insights-all" href="/insights">All insights &rarr;</a>
+    </div>
+  </section>
   <!-- CONTACT -->
   <section id="contact">
     <div class="wrap">
