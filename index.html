@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -628,18 +627,19 @@
   </footer>
 
   <script>
-    // Fade-up observer
-    const els = document.querySelectorAll('.fade-up');
     const io = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
-    }, { threshold: 0.12 });
-    els.forEach(el => io.observe(el));
+    }, { threshold: 0.05, rootMargin: '0px 0px -40px 0px' });
 
-    // Add fade-up to section children
+    // Observe hero fade-ups already in the DOM
+    document.querySelectorAll('.fade-up').forEach(el => io.observe(el));
+
+    // Add fade-up to section children then immediately observe
     document.querySelectorAll('section').forEach(sec => {
       sec.querySelectorAll('.section-tag, .problem-text, .do-item, .dont-block, .contact-intro, form, .form-success').forEach((el, i) => {
         el.classList.add('fade-up');
         el.style.transitionDelay = (i * 0.08) + 's';
+        io.observe(el);
       });
     });
 
