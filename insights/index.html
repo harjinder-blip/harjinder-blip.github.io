@@ -1,1 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Insights · Visivle — Machine Perception Engineering</title>
+  <meta name="description" content="Signal dispatches on machine perception, entity coherence, and the structured data layer that determines how AI classifies and retrieves local businesses." />
+  <link rel="canonical" href="https://visivle.ai/insights" />
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "@id": "https://visivle.ai/insights/#blog",
+    "name": "Visivle Insights",
+    "description": "Signal dispatches on machine perception, entity coherence, and the structured data layer that determines how AI classifies and retrieves local businesses.",
+    "url": "https://visivle.ai/insights",
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://visivle.ai/#organization",
+      "name": "Visivle",
+      "url": "https://visivle.ai"
+    },
+    "blogPost": [
+      {
+        "@type": "BlogPosting",
+        "@id": "https://visivle.ai/insights/your-clinic-is-invisible-to-ai#article",
+        "headline": "Your clinic is invisible to AI — and you don't know it yet",
+        "url": "https://visivle.ai/insights/your-clinic-is-invisible-to-ai",
+        "datePublished": "2026-04-03",
+        "description": "Traditional search traffic is already down 40–50% in categories where AI-native behaviour has taken hold. Here's what that means for every local clinic.",
+        "author": {
+          "@type": "Person",
+          "name": "Harjinder"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Instrument+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --ink:        #0E0D0B;
+      --ink-mid:    #3A3830;
+      --ink-muted:  #7A7768;
+      --ink-faint:  #B8B3A4;
+      --surface:    #F5F3EE;
+      --surface-2:  #EDE9E1;
+      --surface-3:  #E2DDD3;
+      --accent:     #C17A3A;
+      --rule:       rgba(14,13,11,0.10);
+      --rule-hard:  rgba(14,13,11,0.22);
+      --serif: 'DM Serif Display', Georgia, serif;
+      --sans:  'Instrument Sans', system-ui, sans-serif;
+      --mono:  'DM Mono', 'Courier New', monospace;
+      --max: 720px;
+      --gutter: clamp(24px, 5vw, 64px);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+
+    body {
+      background: var(--surface);
+      color: var(--ink);
+      font-family: var(--sans);
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+      background-size: 256px 256px;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.6;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(245,243,238,0.88);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--rule);
+    }
+    .nav-inner {
+      max-width: var(--max); margin: 0 auto;
+      padding: 0 var(--gutter);
+      height: 56px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .logo { font-family: var(--mono); font-size: 0.9rem; font-weight: 500; color: var(--ink); text-decoration: none; }
+    .logo span { color: var(--accent); }
+    .nav-cta { font-family: var(--sans); font-size: 0.8rem; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--ink-faint); padding-bottom: 1px; transition: border-color 0.2s, color 0.2s; }
+    .nav-cta:hover { color: var(--accent); border-color: var(--accent); }
+
+    .wrap { position: relative; z-index: 1; max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
+
+    /* PAGE HEADER */
+    .page-header {
+      padding: clamp(56px, 9vw, 96px) 0 clamp(36px, 5vw, 56px);
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .page-label {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      font-weight: 400;
+      color: var(--ink-muted);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .page-label::before { content: ''; display: block; width: 24px; height: 1px; background: var(--accent); }
+
+    .page-header h1 {
+      font-family: var(--serif);
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin-bottom: 14px;
+    }
+
+    .page-header p {
+      font-size: 0.92rem;
+      color: var(--ink-muted);
+      max-width: 460px;
+      line-height: 1.7;
+    }
+
+    /* POST LIST */
+    .post-list {
+      padding: clamp(40px, 6vw, 72px) 0;
+    }
+
+    .post-item {
+      display: block;
+      text-decoration: none;
+      padding: 32px 0;
+      border-bottom: 1px solid var(--rule);
+      transition: background 0.15s;
+      position: relative;
+    }
+
+    .post-item:first-child { padding-top: 0; }
+
+    .post-item:hover .post-title { color: var(--accent); }
+    .post-item:hover .post-arrow { transform: translateX(4px); color: var(--accent); }
+
+    .post-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 10px;
+    }
+
+    .post-tags {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+
+    .post-tag {
+      font-family: var(--mono);
+      font-size: 0.62rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: rgba(193,122,58,0.08);
+      padding: 3px 8px;
+    }
+
+    .post-title {
+      font-family: var(--serif);
+      font-size: clamp(1.2rem, 3vw, 1.6rem);
+      line-height: 1.2;
+      color: var(--ink);
+      transition: color 0.2s;
+      flex: 1;
+    }
+
+    .post-arrow {
+      font-size: 1.1rem;
+      color: var(--ink-faint);
+      transition: transform 0.2s, color 0.2s;
+      flex-shrink: 0;
+      margin-top: 4px;
+    }
+
+    .post-excerpt {
+      font-size: 0.9rem;
+      color: var(--ink-muted);
+      line-height: 1.7;
+      max-width: 560px;
+      margin-bottom: 16px;
+    }
+
+    .post-meta {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      color: var(--ink-faint);
+      letter-spacing: 0.04em;
+    }
+
+    /* EMPTY STATE for future posts */
+    .coming-soon {
+      padding: 48px 0 0;
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      color: var(--ink-faint);
+      letter-spacing: 0.06em;
+    }
+
+    /* FOOTER */
+    footer { padding: 40px 0; }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+    .footer-mark { font-family: var(--mono); font-size: 0.72rem; color: var(--ink-faint); }
+    .footer-contact { font-family: var(--mono); font-size: 0.72rem; color: var(--ink-muted); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s, color 0.2s; }
+    .footer-contact:hover { color: var(--accent); border-color: var(--accent); }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a class="logo" href="/">visivle<span>.</span>ai</a>
+      <a class="nav-cta" href="/#contact">Work with us</a>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="wrap">
+      <p class="page-label">Signal dispatches</p>
+      <h1>Insights</h1>
+      <p>On machine perception, entity coherence, and the structured data layer that determines how AI classifies and retrieves local businesses.</p>
+    </div>
+  </header>
+
+  <main class="post-list">
+    <div class="wrap">
+
+      <a class="post-item" href="/insights/your-clinic-is-invisible-to-ai">
+        <div class="post-tags">
+          <span class="post-tag">AI Visibility</span>
+          <span class="post-tag">Local Business</span>
+        </div>
+        <div class="post-header">
+          <h2 class="post-title">Your clinic is invisible to AI — and you don't know it yet</h2>
+          <span class="post-arrow">→</span>
+        </div>
+        <p class="post-excerpt">Traditional search traffic is already down 40–50% in categories where AI-native behaviour has taken hold. The businesses AI can't classify simply don't exist in the results. Here's what that means for every clinic in Ontario.</p>
+        <p class="post-meta">Harjinder · April 2026 · 5 min read</p>
+      </a>
+
+      <p class="coming-soon">More dispatches coming — entity coherence, NAP consistency for AI retrieval, and what CNO credential linking does to your retrieval probability.</p>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-inner">
+        <span class="footer-mark">visivle.ai — Ontario, Canada — © 2026</span>
+        <a class="footer-contact" href="mailto:harjinder@visivle.ai">harjinder@visivle.ai</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
