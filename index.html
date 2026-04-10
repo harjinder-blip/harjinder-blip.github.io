@@ -6,6 +6,17 @@
   <title>Visivle — Machine Perception Engineering</title>
   <meta name="description" content="We audit how AI perceives your clinic, correct the signals that cause misclassification, and engineer the structured data layer that changes what AI believes about you." />
 
+  <!-- Open Graph / Social sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://visivle.ai/" />
+  <meta property="og:title" content="Visivle — Machine Perception Engineering" />
+  <meta property="og:description" content="AI has already formed an opinion about your clinic. We engineer what it believes." />
+  <meta property="og:image" content="https://visivle.ai/og-image.svg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://visivle.ai/og-image.svg" />
+
   <!-- Entity schema — we eat our own cooking -->
   <script type="application/ld+json">
   {
@@ -666,7 +677,7 @@
         We'll run your clinic's actual queries live — you'll see exactly how AI perceives you today, in real time, before any commitment. Tell us a little about your practice first.
       </p>
 
-      <form id="contact-form" action="https://formspree.io/f/mqegvaok" method="POST" novalidate>
+      <form id="contact-form" action="https://formspree.io/f/xxxxxxxx" method="POST" novalidate>
 
         <div class="form-grid">
           <div class="field">
@@ -708,12 +719,12 @@
     <div class="wrap">
       <div class="footer-inner">
         <span class="footer-mark">visivle.ai — Ontario, Canada — © 2026</span>
-        <a class="footer-contact" href="mailto:harjinder@visivle.ai">harjinder@visivle.ai</a>
+        <a class="footer-contact" href="/cdn-cgi/l/email-protection#93fbf2e1f9fafdf7f6e1d3e5fae0fae5fff6bdf2fa"><span class="__cf_email__" data-cfemail="224a4350484b4c46475062544b514b544e470c434b">[email&#160;protected]</span></a>
       </div>
     </div>
   </footer>
 
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     const io = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
     }, { threshold: 0.05, rootMargin: '0px 0px -40px 0px' });
@@ -734,16 +745,4 @@
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const res = await fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { 'Accept': 'application/json' }
-      });
-      if (res.ok) {
-        form.style.display = 'none';
-        success.style.display = 'block';
-      }
-    });
-  </script>
-
-</body>
-</html>
+        method:
