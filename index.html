@@ -729,7 +729,14 @@
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
     }, { threshold: 0.05, rootMargin: '0px 0px -40px 0px' });
 
-    document.querySelectorAll('.fade-up').forEach(el => io.observe(el));
+   document.querySelectorAll('.fade-up').forEach(el => {
+  const rect = el.getBoundingClientRect();
+  if (rect.top < window.innerHeight) {
+    el.classList.add('visible');
+  } else {
+    io.observe(el);
+  }
+});
 
     document.querySelectorAll('section').forEach(sec => {
       sec.querySelectorAll('.section-tag, .problem-text, .do-item, .dont-block, .contact-intro, form, .form-success').forEach((el, i) => {
