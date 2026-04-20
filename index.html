@@ -18,52 +18,216 @@
   <meta name="twitter:image" content="https://visivle.ai/og-image.svg" />
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "@id": "https://visivle.ai/#organization",
-    "name": "Visivle",
-    "url": "https://visivle.ai",
-    "email": "harjinder@visivle.ai",
-    "sameAs": "https://www.linkedin.com/in/https://www.linkedin.com/public-profile/settings/?trk=d_flagship3_profile_self_view_public_profile&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BXwuR%2Bv8vQ%2BiOo7tYzJRAbw%3D%3D",
-    "description": "Visivle helps local professional service businesses across Ontario improve how they are perceived and retrieved by AI systems like ChatGPT, Perplexity, and Gemini. We audit entity coherence, correct structured signal misalignment, and track retrieval share over time. Serving clinics, law firms, real estate brokerages, financial advisers, and professional service businesses across Ontario.",
-    "areaServed": {
-      "@type": "Province",
-      "name": "Ontario",
-      "containedInPlace": {
-        "@type": "Country",
-        "name": "Canada"
+{
+  "@context": "https://schema.org",
+  "@graph": [
+
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://visivle.ai/#organization",
+      "name": "Visivle.ai",
+      "alternateName": "Visivle",
+      "url": "https://visivle.ai",
+      "email": "harjinder@visivle.ai",
+      "description": "Visivle helps local professional service businesses across Ontario improve how they are perceived and retrieved by AI systems like ChatGPT, Perplexity, and Gemini. We audit entity coherence, correct structured signal misalignment, and track retrieval share over time. Serving clinics, law firms, real estate brokerages, financial advisers, and professional service businesses across Ontario.",
+      "slogan": "We engineer what AI believes about your business.",
+      "foundingDate": "2026",
+      "sameAs": [
+        "https://www.google.com/maps/place/Visivle.ai/@43.5702194,-79.8677684,10z/data=!3m1!4b1!4m6!3m5!1s0x3b1ae548ed3135:0xafebc3fec32f3c0!8m2!3d43.570693!4d-79.5381396!16s%2Fg%2F11z5238tvr",
+        "https://www.crunchbase.com/organization/visivle-ai",
+        "https://www.linkedin.com/company/visivle-ai/",
+        "https://open.substack.com/pub/visivle/p/ai-doesnt-find-businesses-it-recalls"
+      ],
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Oakville",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Ontario",
+            "containedInPlace": {"@type": "Country", "name": "Canada"}
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Mississauga",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Ontario",
+            "containedInPlace": {"@type": "Country", "name": "Canada"}
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Burlington",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Ontario",
+            "containedInPlace": {"@type": "Country", "name": "Canada"}
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Toronto",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Ontario",
+            "containedInPlace": {"@type": "Country", "name": "Canada"}
+          }
+        }
+      ],
+      "knowsAbout": [
+        "Machine perception engineering",
+        "Entity coherence",
+        "Structured signal alignment",
+        "AI perception audits",
+        "Probe and perturbation testing",
+        "Retrieval share tracking",
+        "Query cluster methodology",
+        "AI retrieval probability",
+        "JSON-LD schema deployment",
+        "NAP consistency for AI retrieval",
+        "Generative engine entity coherence"
+      ],
+      "founder": {
+        "@id": "https://visivle.ai/#founder"
+      },
+      "subjectOf": {
+        "@type": "Blog",
+        "@id": "https://visivle.ai/insights/#blog",
+        "name": "Visivle Insights",
+        "url": "https://visivle.ai/insights",
+        "description": "Signal dispatches on machine perception, entity coherence, and the structured data layer that determines how AI classifies and retrieves local professional service businesses."
       }
     },
-    "knowsAbout": [
-      "Machine perception engineering",
-      "Entity coherence",
-      "Structured signal alignment",
-      "AI perception audits",
-      "Probe and perturbation testing",
-      "Retrieval share tracking",
-      "AI retrieval probability",
-      "JSON-LD schema deployment",
-      "NAP consistency for AI retrieval",
-      "Generative engine entity coherence"
-    ],
-    "founder": {
+
+    {
       "@type": "Person",
+      "@id": "https://visivle.ai/#founder",
       "name": "Harjinder",
       "email": "harjinder@visivle.ai",
-      "knowsAbout": ["Entity coherence", "Machine perception engineering", "AI retrieval systems", "Structured signal alignment", "Probe and perturbation testing"]
+      "jobTitle": "Founder",
+      "worksFor": {
+        "@id": "https://visivle.ai/#organization"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/visivle/"
+      ],
+      "knowsAbout": [
+        "Entity coherence",
+        "Machine perception engineering",
+        "AI retrieval systems",
+        "Structured signal alignment",
+        "Probe and perturbation testing",
+        "Query cluster methodology",
+        "Retrieval share tracking"
+      ]
     },
-    "serviceType": "Machine Perception Engineering",
-    "slogan": "We engineer what AI believes about your business.",
-    "subjectOf": {
-      "@type": "Blog",
-      "@id": "https://visivle.ai/insights/#blog",
-      "name": "Visivle Insights",
-      "url": "https://visivle.ai/insights",
-      "description": "Signal dispatches on machine perception, entity coherence, and the structured data layer that determines how AI classifies and retrieves local professional service businesses."
+
+    {
+      "@type": "WebSite",
+      "@id": "https://visivle.ai/#website",
+      "url": "https://visivle.ai",
+      "name": "Visivle",
+      "description": "Machine perception engineering for local professional service businesses across Ontario.",
+      "publisher": {
+        "@id": "https://visivle.ai/#organization"
+      }
+    },
+
+    {
+      "@type": "FAQPage",
+      "@id": "https://visivle.ai/#faq",
+      "isPartOf": {
+        "@id": "https://visivle.ai/#website"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How is this different from SEO?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SEO optimizes for rankings on the open internet — keywords, backlinks, content volume. It works because search engines crawl in real time and rank what they find. AI models don't work that way. They don't search. They recall. When ChatGPT or Perplexity answers a question about your business, it's drawing on a knowledge graph built from structured signals across the web — not running a live search. We improve the odds of that recall by engineering the signals that shape how AI constructs and classifies your entity. That's a different problem, at a different layer."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "My marketing agency already handles our online presence. Why do I need this?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Keep the relationship — if they understand the problem, by all means work with them. The issue isn't willingness. Any agency can package this and charge for it. The issue is capability. Their entire methodology is built for a different retrieval paradigm — content, backlinks, social signals. That's the muscle they've developed, and they're good at it. Entity coherence at the structured signal layer requires a different toolkit and a different mental model. If they take it on, they're learning on your dime while continuing to sell you what they already know how to do."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What exactly is entity coherence, and why does it matter for AI retrieval?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "When an AI model answers a question about your business confidently, it isn't just reading your website. It borrows and corroborates trust from across the open internet — forming a knowledge graph. Your website says you're the best. But what does the rest of the internet say? What proof exists across directories, registries, citations, and structured data that corroborates that claim? The degree to which all those signals consistently answer the same questions — what is this business, who runs it, where is it, is it credentialed — is entity coherence. Low coherence means the model hedges or skips you. High coherence means it retrieves you with confidence."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What do you actually change? What gets touched?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We don't touch your brand, your positioning, or your content. We audit first, identify gaps in your structured signal layer, and after two months of measurement we tell you exactly what we found and what needs to move. What we implement: structured schemas, JSON-LD, NAP alignment, credential linking, directory signal coherence. Most so-called AI SEO or GEO services stop there. We go a layer deeper — running query clusters specific to your business and area, then applying probe and perturbation testing to stress-test your retrieval stability across AI systems. That's the layer no SEO wrapper reaches."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which AI systems do you track — is this just ChatGPT?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "All major models — ChatGPT, Perplexity, Gemini, and others. The base plan covers ChatGPT. Additional model coverage is available at additional cost."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you guarantee my business will appear in AI results?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. AI systems are probabilistic — no one can guarantee retrieval, and anyone who tells you otherwise is selling you something the technology fundamentally cannot back. What we can do is engineer the structured signals that increase your retrieval probability, and measure whether they're moving. Honest infrastructure, not promises."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What kinds of businesses do you work with?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Any business that needs to exist in the retrieval space — law firms, medical clinics, real estate brokerages, financial advisers, and beyond. The honest answer is that this will eventually matter for every business. AI is becoming the primary surface through which people find and evaluate local professional services. Retrieval share is the new real estate. The businesses building entity coherence now are the ones that will be findable when that shift completes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to be in Ontario?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Everything is delivered remotely. If your business has an online presence — a website, a Google Business Profile, directory listings — we can work with it regardless of where you're based. Ontario is where we started, but the problem is everywhere."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long before I see results?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Roughly two months after initial deployment before retrieval signals begin to move. AI models don't update in real time — they retrain and recrawl on their own cycles. We measure continuously so you're not waiting blindly. You'll see whether the signals are shifting before the retrieval share moves."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What do you need from me to get started?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Two things: contact with whoever manages your online presence — your developer, your web person, or whoever handles your Google Business Profile — and your website. That's the full surface we work with. No content briefs, no brand documents, no onboarding decks. Just access to the entity layer."
+          }
+        }
+      ]
     }
-  }
-  </script>
+
+  ]
+}
+</script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
