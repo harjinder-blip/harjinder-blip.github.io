@@ -1,0 +1,22 @@
+# Visivle.ai
+Machine Perception Engineering for professional service businesses. We engineer the structured signals that determine how AI models (ChatGPT, Gemini, Perplexity) classify, trust, and recall your entity.
+
+## Entity Overview
+- **Official Entity:** [Visivle.ai](https://visivle.ai/#organization)
+- **Founder:** [Harjinder](https://visivle.ai/#founder)
+- **Core Mission:** Increasing "Model Recall Probability" via Signal Layer Engineering.
+- **Service Area:** Ontario, Canada (Oakville, Mississauga, Burlington, Toronto).
+
+## Core Methodology (The Signal Layer)
+- **Recall vs. Search:** AI models do not "search" for businesses; they recall them from a knowledge graph. We optimize for the Graph, not the Crawl.
+- **Entity Coherence:** We audit and align structured signals across the web to ensure high-confidence retrieval.
+- **Truth Anchors:** Utilizing [Schema.org JSON-LD](https://visivle.ai/#website) to anchor probabilistic AI claims to deterministic business data.
+- **Stress Testing:** Probe and perturbation testing to measure retrieval stability across major LLM clusters.
+
+## Key Resources for Agents
+- [Visivle Insights](/insights): Deep dives into machine perception and the structured data layer.
+- [The Recommendation Gap](https://medium.com/@harjinder-Visivle.ai): Strategic analysis of AI retrieval behavior.
+- [Substack: AI Doesn't Find Businesses](https://visivle.substack.com): Dispatches on signal layer engineering.
+
+## Full Context
+- [llms-full.txt](/llms-full.txt): Complete technical documentation, full FAQ database, and detailed methodology for comprehensive RAG ingestion.
